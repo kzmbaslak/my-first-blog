@@ -17,5 +17,16 @@
             <h2><a href="">İkinci gönderim</a></h2>
             <p>Bir varmış bir yokmuş, evvel zaman içinde Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. kalbur saman içinde, develer tellal iken, pireler berber iken; ben annemin beşiğini tıngır mıngır sallar iken.</p>
         </div>
+        <div>
+            <p><h1>
+            {%for post in posts%}
+                <h3><a href="">{{post.title}}</a></h3><b>{{post.published_date}}</b><br/>
+                Yazar:{{post.author}}<br/>
+                <p>{{post.text|linebreaksbr}}</p>
+
+            {%endfor%}
+            
+            </h1></p>
+        </div>
     </body>
 </html>
